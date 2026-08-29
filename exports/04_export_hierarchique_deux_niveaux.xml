@@ -1,4 +1,63 @@
-<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<!--
+CONFIGURATION DU TEST HIÉRARCHIQUE À DEUX NIVEAUX
+
+Versement :
+- cote, cotes extrêmes et référence : TEST ;
+- intitulé : TEST ;
+- utilisateur versant : UTILISATEUR-TEST ;
+- responsable du versement : UTILISATEUR-TEST ;
+- service gestionnaire : FACULTE DE MEDECINE DE MONTPELLIER ;
+- communicabilité : oui, communicable à tous ;
+- date d’analyse : 12/06/2026 ;
+- autre instrument de recherche : non.
+
+Hiérarchie saisie dans Flora :
+- TEST-1 : unité de type « Article », placée au premier niveau ;
+- TEST-2 : unité de type « Dossier », rattachée à TEST-1 ;
+- TEST-3 : unité de type « Dossier », également rattachée à TEST-1.
+
+Article TEST-1 :
+- cote : TEST-1 ;
+- cotes extrêmes : 1 ;
+- cote provisoire : 4.96 ;
+- cote de vérification : TEST 1 ;
+- date d’analyse : 16/06/2026.
+
+Dossier TEST-2 :
+- cote : TEST-2 ;
+- cotes extrêmes : 2 ;
+- cote provisoire : 5.96 ;
+- cote de vérification : TEST 2 ;
+- date d’analyse : 12/06/2026.
+
+Dossier TEST-3 :
+- cote : TEST-3 ;
+- cotes extrêmes : 3 ;
+- cote provisoire : 5.96 ;
+- cote de vérification : TEST 3 ;
+- date d’analyse : 16/06/2026.
+
+Les autres informations présentes au niveau des unités ont été ajoutées
+automatiquement par Flora ou reprises depuis le versement.
+
+RÉSULTAT OBSERVÉ DANS L’EXPORT
+
+La hiérarchie attendue comprend trois unités : l’article TEST-1 et ses deux
+dossiers enfants TEST-2 et TEST-3. L’export produit pourtant cinq composants
+<c> :
+- TEST-2 apparaît une première fois comme composant autonome, puis une seconde
+  fois sous TEST-1 ;
+- TEST-3 apparaît une première fois sous TEST-1, puis une seconde fois comme
+  composant autonome ;
+- les mêmes identifiants sont réutilisés dans les deux occurrences.
+
+L’export restitue donc les deux dossiers à la fois sous leur parent et au
+premier niveau de la description.
+-->
+
+<ead>
 <eadheader >
 <eadid >
 flora 96 
