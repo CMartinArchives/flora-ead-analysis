@@ -1,110 +1,158 @@
 #!/usr/bin/env python3
-"""Analyse structurelle et validation d'exports EAD produits par Flora.
 
-Le script distingue deux contrôles complémentaires :
+"""Analyse la structure d'exports EAD et les valide contre une DTD.
 
-1. l'analyse structurelle, qui compte les composants ``<c>`` et repère les
-   identifiants dupliqués ;
-2. la validation du document contre la DTD EAD 2002 fournie avec le dépôt.
+La validation suit la méthode décrite dans la documentation de lxml.
+L'analyse structurelle repose sur les fonctions courantes de lxml pour
+parcourir l'arborescence d'un instrument EAD.
 
-Il ne modifie jamais les fichiers analysés. Les résultats peuvent être affichés
-dans le terminal ou écrits en JSON pour être conservés avec l'expérimentation.
+Les contrôles portant sur le nombre de composants, les identifiants répétés
+et leurs chemins hiérarchiques ont été définis pour étudier les anomalies
+observées dans les exports Flora.
+
+Référence technique :
+https://lxml.de/validation.html
 """
 
-from __future__ import annotations
+# IMPORTS
 
+# Lit les fichiers et les options indiqués dans la ligne de commande.
 import argparse
-import json
-import sys
-from collections import Counter
-from pathlib import Path
-from typing import Any
 
+# Transforme les résultats de l'analyse en données JSON.
+import json
+
+# Permet d'afficher les erreurs séparément et de renvoyer un code de sortie.
+import sys
+
+# Compte les occurrences des identifiants et des catégories d'erreurs.
+from collections import Counter
+
+# Représente les chemins vers les fichiers XML, la DTD et le rapport JSON.
+from pathlib import Path
+
+# Lit les fichiers XML et permet de les valider contre une DTD.
 from lxml import etree
 
 
-def normaliser_texte(element: etree._Element | None) -> str | None:
-    """Réunit le texte descendant d'un élément en normalisant les espaces."""
+# OUTILS COMMUNS
+
+def normaliser_texte(element):
+    """Récupère le texte d'un élément et supprime les espaces inutiles."""
     if element is None:
         return None
+
     texte = " ".join("".join(element.itertext()).split())
     return texte or None
 
 
-def chemin_composant(composant: etree._Element) -> list[str]:
-    """Retourne le chemin des identifiants ``<c>`` menant au composant."""
-    ancetres = [
-        element.get("id") or "(sans identifiant)"
-        for element in composant.iterancestors("c")
-    ]
-    return list(reversed(ancetres)) + [
-        composant.get("id") or "(sans identifiant)"
-    ]
-
-
-def classer_erreur(message: str) -> str:
-    """Regroupe les messages détaillés de la DTD en catégories lisibles."""
-    message_minuscule = message.lower()
-    if "already defined" in message_minuscule or "id " in message_minuscule and "defined" in message_minuscule:
-        return "identifiant duplique"
-    if "no declaration for element" in message_minuscule:
-        return "element non declare"
-    if "content does not follow the dtd" in message_minuscule:
-        return "modele de contenu non conforme"
-    if "no declaration for attribute" in message_minuscule:
-        return "attribut non declare"
-    return "autre erreur de validation"
-
-
-def charger_xml(chemin: Path) -> etree._ElementTree:
-    """Charge un XML sans résoudre le système externe indiqué par son DOCTYPE."""
+def charger_xml(chemin):
+    """Charge un XML sans utiliser automatiquement la DTD de son DOCTYPE."""
     parseur = etree.XMLParser(
         load_dtd=False,
         no_network=True,
         resolve_entities=False,
         recover=False,
     )
+
     return etree.parse(str(chemin), parseur)
 
 
-def analyser_fichier(chemin_xml: Path, dtd: etree.DTD | None) -> dict[str, Any]:
-    """Analyse un export et renvoie un résultat sérialisable en JSON."""
-    resultat: dict[str, Any] = {"fichier": chemin_xml.name}
+# ANALYSE DE LA HIÉRARCHIE EAD
+
+def chemin_composant(composant):
+    """Reconstitue le chemin hiérarchique menant à un composant <c>."""
+    ancetres = [
+        element.get("id") or "(sans identifiant)"
+        for element in composant.iterancestors("c")
+    ]
+
+    return list(reversed(ancetres)) + [
+        composant.get("id") or "(sans identifiant)"
+    ]
+
+
+# VALIDATION CONTRE LA DTD
+
+def classer_erreur(message):
+    """Classe les erreurs de validation dans plusieurs catégories."""
+    message = message.lower()
+
+    if (
+        "already defined" in message
+        or ("id " in message and "defined" in message)
+    ):
+        return "identifiant duplique"
+
+    if "no declaration for element" in message:
+        return "element non declare"
+
+    if "content does not follow the dtd" in message:
+        return "modele de contenu non conforme"
+
+    if "no declaration for attribute" in message:
+        return "attribut non declare"
+
+    return "autre erreur de validation"
+
+
+# ANALYSE D'UN EXPORT
+
+def analyser_fichier(chemin_xml, dtd):
+    """Analyse un fichier XML et rassemble ses résultats."""
+    resultat = {
+        "fichier": chemin_xml.name
+    }
 
     try:
         document = charger_xml(chemin_xml)
+
     except (OSError, etree.XMLSyntaxError) as erreur:
         resultat.update(
             {
                 "xml_bien_forme": False,
                 "erreur_xml": str(erreur),
                 "validation_dtd": None,
+                "nombre_erreurs_validation": 0,
+                "categories_erreurs": {},
+                "erreurs_validation": [],
             }
         )
         return resultat
 
     racine = document.getroot()
-    composants = document.xpath("//c")
+
+    # Recherche de tous les composants archivistiques <c>.
+    composants = document.findall(".//c")
+
+    # Relevé et comptage de leurs identifiants.
     identifiants = [
-        composant.get("id") for composant in composants if composant.get("id")
+        composant.get("id")
+        for composant in composants
+        if composant.get("id")
     ]
+
     occurrences = Counter(identifiants)
+
     doublons = {
         identifiant: nombre
         for identifiant, nombre in sorted(occurrences.items())
         if nombre > 1
     }
 
-    # Le titre du versement est exporté par Flora dans <unititle> (sic) ou,
-    # après correction, dans l'élément EAD 2002 <unittitle>.
+    # Flora emploie <unititle> à la place de la balise EAD <unittitle>.
+    # Les deux formes sont recherchées pour analyser aussi le fichier corrigé.
     titre = racine.find("./archdesc/did/unittitle")
+
     if titre is None:
         titre = racine.find("./archdesc/did/unititle")
 
     resultat.update(
         {
             "xml_bien_forme": True,
-            "eadid": normaliser_texte(racine.find("./eadheader/eadid")),
+            "eadid": normaliser_texte(
+                racine.find("./eadheader/eadid")
+            ),
             "titre": normaliser_texte(titre),
             "nombre_composants": len(composants),
             "nombre_identifiants": len(identifiants),
@@ -122,12 +170,16 @@ def analyser_fichier(chemin_xml: Path, dtd: etree.DTD | None) -> dict[str, Any]:
         }
     )
 
+    # La validation n'est effectuée que si une DTD a été indiquée.
     if dtd is None:
         resultat["validation_dtd"] = None
+        resultat["nombre_erreurs_validation"] = 0
+        resultat["categories_erreurs"] = {}
         resultat["erreurs_validation"] = []
         return resultat
 
     valide = dtd.validate(document)
+
     erreurs = [
         {
             "ligne": erreur.line,
@@ -136,98 +188,151 @@ def analyser_fichier(chemin_xml: Path, dtd: etree.DTD | None) -> dict[str, Any]:
         }
         for erreur in dtd.error_log
     ]
-    categories = Counter(erreur["categorie"] for erreur in erreurs)
+
+    categories = Counter(
+        erreur["categorie"]
+        for erreur in erreurs
+    )
+
     resultat.update(
         {
             "validation_dtd": valide,
             "nombre_erreurs_validation": len(erreurs),
-            "categories_erreurs": dict(sorted(categories.items())),
+            "categories_erreurs": dict(
+                sorted(categories.items())
+            ),
             "erreurs_validation": erreurs,
         }
     )
+
     return resultat
 
 
-def afficher_resume(resultat: dict[str, Any]) -> None:
-    """Affiche un résumé humainement lisible d'un résultat."""
+# AFFICHAGE DES RÉSULTATS
+
+def afficher_resume(resultat):
+    """Affiche les principaux résultats dans le terminal."""
     print(f"\n{resultat['fichier']}")
     print("-" * len(resultat["fichier"]))
+
     if not resultat.get("xml_bien_forme"):
         print(f"XML mal formé : {resultat['erreur_xml']}")
         return
 
     print(f"Composants <c> : {resultat['nombre_composants']}")
+
     print(
         "Identifiants : "
         f"{resultat['nombre_identifiants']} occurrence(s), "
         f"{resultat['nombre_identifiants_uniques']} valeur(s) unique(s)"
     )
+
     doublons = resultat["identifiants_dupliques"]
     print(f"Identifiants dupliqués : {doublons or 'aucun'}")
 
     validation = resultat.get("validation_dtd")
+
     if validation is None:
         print("Validation DTD : non demandée")
+
     else:
-        print(f"Validation DTD : {'valide' if validation else 'invalide'}")
+        etat = "valide" if validation else "invalide"
+        print(f"Validation DTD : {etat}")
+
         print(
-            f"Erreurs de validation : {resultat['nombre_erreurs_validation']} "
+            "Erreurs de validation : "
+            f"{resultat['nombre_erreurs_validation']} "
             f"{resultat['categories_erreurs']}"
         )
 
 
-def construire_cli() -> argparse.ArgumentParser:
-    analyseur = argparse.ArgumentParser(description=__doc__)
+# ARGUMENTS DE LA LIGNE DE COMMANDE
+
+def construire_arguments():
+    """Définit les arguments acceptés par le script."""
+    analyseur = argparse.ArgumentParser(
+        description=__doc__
+    )
+
     analyseur.add_argument(
         "xml",
         nargs="+",
         type=Path,
         help="un ou plusieurs exports XML à analyser",
     )
+
     analyseur.add_argument(
         "--dtd",
         type=Path,
-        help="DTD EAD 2002 utilisée pour la validation",
+        help="DTD utilisée pour valider les fichiers",
     )
+
     analyseur.add_argument(
         "--json",
         dest="sortie_json",
         type=Path,
-        help="écrit également les résultats détaillés dans ce fichier JSON",
+        help="fichier JSON dans lequel enregistrer les résultats",
     )
+
     return analyseur
 
 
-def main() -> int:
-    arguments = construire_cli().parse_args()
+# EXÉCUTION DU SCRIPT
+
+def main():
+    """Lance l'analyse des fichiers indiqués dans la commande."""
+    arguments = construire_arguments().parse_args()
 
     dtd = None
+
     if arguments.dtd:
         try:
             dtd = etree.DTD(str(arguments.dtd))
+
         except (OSError, etree.DTDParseError) as erreur:
-            print(f"Impossible de charger la DTD : {erreur}", file=sys.stderr)
+            print(
+                f"Impossible de charger la DTD : {erreur}",
+                file=sys.stderr,
+            )
             return 2
 
-    resultats = [analyser_fichier(chemin, dtd) for chemin in arguments.xml]
+    resultats = [
+        analyser_fichier(chemin, dtd)
+        for chemin in arguments.xml
+    ]
+
     for resultat in resultats:
         afficher_resume(resultat)
 
+    # Création facultative du rapport JSON.
     if arguments.sortie_json:
-        arguments.sortie_json.parent.mkdir(parents=True, exist_ok=True)
+        arguments.sortie_json.parent.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
         arguments.sortie_json.write_text(
-            json.dumps(resultats, ensure_ascii=False, indent=2) + "\n",
+            json.dumps(
+                resultats,
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
             encoding="utf-8",
         )
-        print(f"\nRapport JSON écrit dans {arguments.sortie_json}")
 
-    # Un code de sortie non nul facilite l'emploi du script dans une chaîne de
-    # tests : 1 signale un XML mal formé ou un document invalide contre la DTD.
+        print(
+            f"\nRapport JSON écrit dans "
+            f"{arguments.sortie_json}"
+        )
+
+    # Le code 1 signale un XML mal formé ou invalide contre la DTD.
     echec = any(
         not resultat.get("xml_bien_forme")
         or resultat.get("validation_dtd") is False
         for resultat in resultats
     )
+
     return 1 if echec else 0
 
 
