@@ -36,20 +36,20 @@ copies publiables. Cette anonymisation ne modifie ni les éléments XML, ni leur
 ordre, ni les relations hiérarchiques, ni les identifiants archivistiques sur
 lesquels porte l'analyse.
 
-## Fichiers d'essai analysés
+## Fichiers d’essai analysés
+
+Les essais à plat décrivent des articles placés au même niveau dans l’instrument, sans relation parent–enfant entre eux. Les essais dits « enrichis » ajoutent aux identifiants et intitulés minimaux des informations descriptives ou de gestion afin de vérifier leur transposition dans les éléments EAD correspondants.
 
 | Fichier | Configuration testée | Résultat structurel |
 |---|---|---|
-| `01_export_minimal_a_plat.xml` | Un versement et trois articles à plat | 3 composants et 3 identifiants uniques |
-| `02_export_a_plat_versement_enrichi.xml` | Un versement enrichi et trois articles peu renseignés | 3 composants et aucun identifiant dupliqué |
-| `03_export_a_plat_article_enrichi.xml` | Un versement et un article enrichis | 3 composants et aucun identifiant dupliqué |
-| `04_export_hierarchique_deux_niveaux.xml` | Un article comprenant deux dossiers | 5 composants pour 3 unités ; `TEST-2` et `TEST-3` apparaissent deux fois |
-| `05_export_hierarchique_trois_niveaux.xml` | Une arborescence composée d'un article, d'un dossier et d'un sous-dossier | 6 composants pour 3 unités ; `TEST2-2` apparaît deux fois et `TEST2-3` trois fois |
-| `06_export_hierarchique_deux_branches.xml` | Deux branches article--dossier indépendantes | 6 composants pour 4 unités ; `TEST3-2` et `TEST3-4` apparaissent deux fois |
+| `01_export_minimal_a_plat.xml` | Un versement contenant trois articles frères, décrits uniquement par les informations minimales nécessaires à leur identification | 3 composants `<c>` et 3 identifiants uniques |
+| `02_export_a_plat_versement_enrichi.xml` | La même structure sans relation parent–enfant, avec une description détaillée au niveau du versement et des articles volontairement peu renseignés | 3 composants `<c>` et aucun identifiant dupliqué |
+| `03_export_a_plat_article_enrichi.xml` | La même structure à plat, avec une description détaillée du versement et l’ajout de champs descriptifs et de gestion au niveau d’un article | 3 composants `<c>` et aucun identifiant dupliqué |
+| `04_export_hierarchique_deux_niveaux.xml` | Une arborescence à deux niveaux composée d’un article parent et de deux dossiers enfants | 5 composants `<c>` pour 3 unités : `TEST-2` et `TEST-3` sont chacun exportés deux fois |
+| `05_export_hierarchique_trois_niveaux.xml` | Une branche à trois niveaux composée d’un article, d’un dossier enfant et d’un sous-dossier rattaché à ce dernier | 6 composants `<c>` pour 3 unités : `TEST2-2` est exporté deux fois et `TEST2-3` trois fois |
+| `06_export_hierarchique_deux_branches.xml` | Deux branches indépendantes comprenant chacune un article parent et un dossier enfant | 6 composants `<c>` pour 4 unités : les dossiers `TEST3-2` et `TEST3-4` sont chacun exportés deux fois |
 
-L'essai d'export simultané de plusieurs versements n'apparaît pas dans le dépôt,
-car Flora a produit une archive ZIP vide de 22 octets, sans fichier XML à
-analyser.
+Un dernier essai portait sur l’export simultané de plusieurs versements. Flora ayant produit une archive ZIP vide de 22 octets, ce test n’a fourni aucun document XML susceptible d’être analysé.
 
 ## Installation
 
