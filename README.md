@@ -2,6 +2,8 @@
 
 Ce dépôt accompagne le mémoire consacré à l’architecture documentaire des Archives historiques de la Faculté de médecine de l’Université de Montpellier. Il rassemble les fichiers et les scripts utilisés en 2026 pour analyser l’export XML-EAD du module Archives de Flora, dans la version de préproduction disponible pendant le stage.
 
+Le script `analyser_exports.py` peut être utilisé pour examiner d’autres fichiers EAD 2002, à condition de lui fournir la DTD correspondante. Les catégories d’erreurs et les contrôles structurels ont toutefois été définis à partir des exports Flora étudiés. Le script `corriger_export_minimal.py` est lui strictement limité au cas minimal fourni dans ce dépôt et ne constitue pas un outil général de correction des fichiers EAD.
+
 Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation.
 
 ## Contenu du dépôt
