@@ -1,4 +1,72 @@
-<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<!--
+CONFIGURATION DU TEST HIÉRARCHIQUE AVEC DEUX BRANCHES INDÉPENDANTES
+
+Versement :
+- cote, cotes extrêmes et référence : TEST3 ;
+- intitulé : - ;
+- utilisateur versant : UTILISATEUR-TEST ;
+- responsable du versement : UTILISATEUR-TEST ;
+- service gestionnaire : FACULTE DE MEDECINE DE MONTPELLIER ;
+- communicabilité : oui, communicable à tous ;
+- autre instrument de recherche : non.
+
+Hiérarchie saisie dans Flora :
+- première branche :
+  - TEST3-1 : unité de type « Article », placée au premier niveau ;
+  - TEST3-2 : unité de type « Dossier », rattachée à TEST3-1 ;
+- seconde branche :
+  - TEST3-3 : unité de type « Article », placée au premier niveau ;
+  - TEST3-4 : unité de type « Dossier », rattachée à TEST3-3.
+
+Article TEST3-1 :
+- cote : TEST3-1 ;
+- cotes extrêmes : 1 ;
+- cote provisoire : 4.100 ;
+- cote de vérification : TEST3 1.
+
+Dossier TEST3-2 :
+- cote : TEST3-2 ;
+- cotes extrêmes : 2 ;
+- cote provisoire : 5.100 ;
+- cote de vérification : TEST3 2.
+
+Article TEST3-3 :
+- cote : TEST3-3 ;
+- cotes extrêmes : 3 ;
+- cote provisoire : 4.100 ;
+- cote de vérification : TEST3 3.
+
+Dossier TEST3-4 :
+- cote : TEST3-4 ;
+- cotes extrêmes : 4 ;
+- cote provisoire : 5.100 ;
+- cote de vérification : TEST3 4.
+
+Les autres informations présentes au niveau des unités ont été ajoutées
+automatiquement par Flora ou reprises depuis le versement.
+
+RÉSULTAT OBSERVÉ DANS L’EXPORT
+
+La hiérarchie attendue comprend quatre unités réparties dans deux branches :
+- TEST3-1 > TEST3-2 ;
+- TEST3-3 > TEST3-4.
+
+L’export produit pourtant six composants <c> :
+- TEST3-1 et TEST3-3 apparaissent chacun une seule fois ;
+- TEST3-2 apparaît une première fois comme composant autonome, puis une
+  seconde fois sous TEST3-1 ;
+- TEST3-4 apparaît une première fois sous TEST3-3, puis une seconde fois
+  comme composant autonome ;
+- les mêmes identifiants sont réutilisés dans les deux occurrences de chaque
+  dossier.
+
+Les deux branches attendues sont présentes, mais chacun de leurs dossiers
+enfants est également exporté séparément au premier niveau de la description.
+-->
+
+<ead>
 <eadheader >
 <eadid >
 flora 100 
