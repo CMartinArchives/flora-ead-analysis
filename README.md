@@ -13,11 +13,11 @@ testée au moment de l'expérimentation.
 
 ```text
 .
-├── analyser_exports.py          analyse structurelle et validation DTD
-├── corriger_export_minimal.py   preuve de concept limitée au test minimal
-├── requirements.txt
+├── analyser_exports.py          comptage des composants, détection des identifiants dupliqués et validation contre la DTD EAD 2002
+├── corriger_export_minimal.py   correction expérimentale des erreurs de validation du seul export minimal à plat
+├── requirements.txt             dépendance Python nécessaire à l’analyse et à la validation des fichiers XML (`lxml`)
 ├── tests/
-│   └── test_analyse.py             tests de non-régression
+│   └── test_analyse.py          vérification automatisée des résultats attendus
 ├── dtd/
 │   └── ead.dtd                  DTD EAD 2002 employée pendant les tests
 ├── exports/
@@ -28,7 +28,7 @@ testée au moment de l'expérimentation.
 │   ├── 05_export_hierarchique_trois_niveaux.xml
 │   └── 06_export_hierarchique_deux_branches.xml
 └── rapports/
-    └── analyse.json
+    └── analyse.json             résultats détaillés produits automatiquement par le script d’analyse
 ```
 
 Les valeurs nominatives saisies pour les essais ont été remplacées dans les
