@@ -2,9 +2,9 @@
 
 Ce dépôt accompagne le mémoire consacré à l’architecture documentaire des Archives historiques de la Faculté de médecine de l’Université de Montpellier. Il rassemble les fichiers et les scripts utilisés en 2026 pour analyser l’export XML-EAD du module Archives de Flora, dans la version de préproduction disponible pendant le stage.
 
-Le script `analyser_exports.py` peut être utilisé pour examiner d’autres fichiers EAD 2002, à condition de lui fournir la DTD correspondante. Les catégories d’erreurs et les contrôles structurels ont toutefois été définis à partir des exports Flora étudiés. Le script `corriger_export_minimal.py` est lui strictement limité au cas minimal fourni dans ce dépôt et ne constitue pas un outil général de correction des fichiers EAD.
+Le script `analyser_exports.py` peut être utilisé pour examiner d’autres fichiers en EAD 2002, à condition de lui fournir la DTD correspondante. Les contrôles structurels et les catégories d’erreurs qu’il emploie ont toutefois été définis à partir des exports Flora étudiés. Le script `corriger_export_minimal.py` est, quant à lui, strictement limité au fichier minimal fourni dans ce dépôt et ne constitue pas un outil général de correction des fichiers EAD.
 
-Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation.
+Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation, à l'été 2026.
 
 ## Contenu du dépôt
 
@@ -13,8 +13,6 @@ Les résultats présentés ne valent pas pour toutes les versions ou configurati
 ├── analyser_exports.py          analyse de la structure des exports et validation contre la DTD EAD 2002
 ├── corriger_export_minimal.py   correction expérimentale du seul export minimal à plat
 ├── requirements.txt             bibliothèque Python nécessaire au fonctionnement des scripts (`lxml`)
-├── tests/
-│   └── test_analyse.py          vérification automatique des résultats attendus
 ├── dtd/
 │   └── ead.dtd                  DTD EAD 2002 utilisée pour valider les exports
 ├── exports/
@@ -104,21 +102,6 @@ Le script effectue plusieurs corrections précises :
 Après ces transformations, l’export minimal est conforme à la DTD EAD 2002. Ce résultat montre que certaines erreurs peuvent être corrigées automatiquement lorsqu’elles suivent une règle stable.
 
 Ce script reste cependant un essai limité. Il ne traite pas l’ensemble des champs présents dans les exports enrichis et ne reconstruit pas les arborescences dans lesquelles des unités sont répétées. Supprimer automatiquement les doublons ne suffirait pas : il faudrait également déterminer la place correcte de chaque unité dans la hiérarchie. Les exports hiérarchiques sont donc conservés comme fichiers d’analyse et ne sont pas corrigés par ce script.
-
-## Vérifier automatiquement les résultats
-
-```bash
-python3 -m unittest discover -s tests -v
-```
-
-Ces tests vérifient que le script retrouve bien :
-
-- le nombre attendu de composants et d’identifiants ;
-- les identifiants répétés dans les trois exports hiérarchiques ;
-- les 29 erreurs présentes dans l’export minimal original ;
-- la conformité à la DTD du fichier minimal après correction.
-
-Ils permettent de s’assurer qu’une modification ultérieure du code ne change pas involontairement les résultats de l’analyse.
 
 ## Principaux résultats
 
