@@ -1,4 +1,69 @@
-<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ead PUBLIC
+  "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN"
+  "ead.dtd">
+
+<!--
+CONFIGURATION DU TEST HIÉRARCHIQUE À TROIS NIVEAUX
+
+Versement :
+- cote, cotes extrêmes et référence : TEST2 ;
+- intitulé : - ;
+- utilisateur versant : UTILISATEUR-TEST ;
+- responsable du versement : UTILISATEUR-TEST ;
+- service gestionnaire : FACULTE DE MEDECINE DE MONTPELLIER ;
+- communicabilité : oui, communicable à tous ;
+- autre instrument de recherche : non.
+
+Hiérarchie saisie dans Flora :
+- TEST2-1 : unité de type « Article », placée au premier niveau ;
+- TEST2-2 : unité de type « Dossier », rattachée à TEST2-1 ;
+- TEST2-3 : unité de type « Sous-dossier », rattachée à TEST2-2.
+
+Article TEST2-1 :
+- cote : TEST2-1 ;
+- cotes extrêmes : 1 ;
+- cote provisoire : 4.99 ;
+- cote de vérification : TEST2 1.
+
+Dossier TEST2-2 :
+- cote : TEST2-2 ;
+- cotes extrêmes : 2 ;
+- cote provisoire : 5.99 ;
+- cote de vérification : TEST2 2.
+
+Sous-dossier TEST2-3 :
+- cote : TEST2-3 ;
+- cotes extrêmes : 3 ;
+- cote provisoire : 6.99 ;
+- cote de vérification : TEST2 3.
+
+Les autres informations présentes au niveau des unités ont été ajoutées
+automatiquement par Flora ou reprises depuis le versement.
+
+RÉSULTAT OBSERVÉ DANS L’EXPORT
+
+La hiérarchie attendue comprend trois unités emboîtées :
+TEST2-1 > TEST2-2 > TEST2-3.
+
+L’export produit pourtant six composants <c> :
+- TEST2-1 apparaît une fois, avec TEST2-2 et TEST2-3 correctement emboîtés
+  sous ce composant ;
+- TEST2-2 apparaît deux fois : une fois avec son sous-dossier au premier
+  niveau de la description et une fois sous TEST2-1 ;
+- TEST2-3 apparaît trois fois : sous la première occurrence de TEST2-2,
+  sous la seconde occurrence de TEST2-2 et comme composant autonome ;
+- les mêmes identifiants sont réutilisés dans toutes les occurrences.
+
+Chaque unité enfant est ainsi exportée dans la branche complète issue de son
+parent, mais également dans des branches commençant à son propre niveau.
+Le nombre d’occurrences augmente donc avec la profondeur de l’unité dans
+l’arborescence.
+-->
+
+<ead>
 <eadheader >
 <eadid >
 flora 99 
