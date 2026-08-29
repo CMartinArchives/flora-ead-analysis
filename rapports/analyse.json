@@ -1,0 +1,1482 @@
+[
+  {
+    "fichier": "01_export_minimal_a_plat.xml",
+    "xml_bien_forme": true,
+    "eadid": "flora 97",
+    "titre": "Intitulé : TEST A PLAT",
+    "nombre_composants": 3,
+    "nombre_identifiants": 3,
+    "nombre_identifiants_uniques": 3,
+    "identifiants_dupliques": {},
+    "composants": [
+      {
+        "id": "ESSAI-1",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-1"
+        ]
+      },
+      {
+        "id": "ESSAI-2",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-2"
+        ]
+      },
+      {
+        "id": "ESSAI-3",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-3"
+        ]
+      }
+    ],
+    "validation_dtd": false,
+    "nombre_erreurs_validation": 29,
+    "categories_erreurs": {
+      "element non declare": 9,
+      "modele de contenu non conforme": 20
+    },
+    "erreurs_validation": [
+      {
+        "ligne": 17,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element archdesc content does not follow the DTD, expecting (runner* , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)*), got (did admininfo add dsc)"
+      },
+      {
+        "ligne": 18,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle)"
+      },
+      {
+        "ligne": 24,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 27,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 28,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 39,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 43,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 45,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 47,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 48,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 55,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 56,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 67,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 71,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 73,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 76,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 77,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 84,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 85,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 96,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 100,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 102,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 105,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 106,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 113,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 114,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 125,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 129,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 131,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      }
+    ]
+  },
+  {
+    "fichier": "02_export_a_plat_versement_enrichi.xml",
+    "xml_bien_forme": true,
+    "eadid": "flora 98",
+    "titre": "Intitulé : Intitulé",
+    "nombre_composants": 3,
+    "nombre_identifiants": 3,
+    "nombre_identifiants_uniques": 3,
+    "identifiants_dupliques": {},
+    "composants": [
+      {
+        "id": "ESSAI-RICHE-1",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-RICHE-1"
+        ]
+      },
+      {
+        "id": "ESSAI-RICHE-2",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-RICHE-2"
+        ]
+      },
+      {
+        "id": "ESSAI-RICHE-3",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-RICHE-3"
+        ]
+      }
+    ],
+    "validation_dtd": false,
+    "nombre_erreurs_validation": 30,
+    "categories_erreurs": {
+      "autre erreur de validation": 1,
+      "element non declare": 9,
+      "modele de contenu non conforme": 20
+    },
+    "erreurs_validation": [
+      {
+        "ligne": 12,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element profiledesc content does not follow the DTD, expecting (creation? , langusage? , descrules?), got (langusage creation)"
+      },
+      {
+        "ligne": 20,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element archdesc content does not follow the DTD, expecting (runner* , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)*), got (did admininfo scopecontent add odd dsc)"
+      },
+      {
+        "ligne": 21,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle origination unitdate physdesc)"
+      },
+      {
+        "ligne": 28,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 42,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 43,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element custodhist content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | custodhist | acqinfo)+), got (head)"
+      },
+      {
+        "ligne": 44,
+        "categorie": "autre erreur de validation",
+        "message": "Element p is not declared in head list of possible children"
+      },
+      {
+        "ligne": 47,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (CDATA persname persname corpname)"
+      },
+      {
+        "ligne": 59,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element appraisal content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | appraisal)+), got (CDATA)"
+      },
+      {
+        "ligne": 65,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p p CDATA)"
+      },
+      {
+        "ligne": 73,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 75,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 83,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 96,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 97,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 108,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 112,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 114,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 117,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 130,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 131,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 142,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 146,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 148,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 151,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 164,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 165,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 176,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 180,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 182,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      }
+    ]
+  },
+  {
+    "fichier": "03_export_a_plat_article_enrichi.xml",
+    "xml_bien_forme": true,
+    "eadid": "flora 98",
+    "titre": "Intitulé : Intitulé",
+    "nombre_composants": 3,
+    "nombre_identifiants": 3,
+    "nombre_identifiants_uniques": 3,
+    "identifiants_dupliques": {},
+    "composants": [
+      {
+        "id": "ESSAI-RICHE-2",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-RICHE-2"
+        ]
+      },
+      {
+        "id": "ESSAI-RICHE-3",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-RICHE-3"
+        ]
+      },
+      {
+        "id": "ESSAI-RICHE-1",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "ESSAI-RICHE-1"
+        ]
+      }
+    ],
+    "validation_dtd": false,
+    "nombre_erreurs_validation": 37,
+    "categories_erreurs": {
+      "autre erreur de validation": 2,
+      "element non declare": 10,
+      "modele de contenu non conforme": 25
+    },
+    "erreurs_validation": [
+      {
+        "ligne": 18,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element profiledesc content does not follow the DTD, expecting (creation? , langusage? , descrules?), got (langusage creation)"
+      },
+      {
+        "ligne": 26,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element archdesc content does not follow the DTD, expecting (runner* , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)*), got (did admininfo scopecontent add odd dsc)"
+      },
+      {
+        "ligne": 27,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle origination unitdate physdesc)"
+      },
+      {
+        "ligne": 34,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 48,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 49,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element custodhist content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | custodhist | acqinfo)+), got (head)"
+      },
+      {
+        "ligne": 50,
+        "categorie": "autre erreur de validation",
+        "message": "Element p is not declared in head list of possible children"
+      },
+      {
+        "ligne": 53,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (CDATA persname persname corpname)"
+      },
+      {
+        "ligne": 65,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element appraisal content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | appraisal)+), got (CDATA)"
+      },
+      {
+        "ligne": 71,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p p CDATA)"
+      },
+      {
+        "ligne": 76,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 83,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 85,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 93,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 106,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 107,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 118,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 122,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 124,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 127,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add)"
+      },
+      {
+        "ligne": 140,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 141,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 152,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 156,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 158,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 161,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo scopecontent add odd)"
+      },
+      {
+        "ligne": 162,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle origination unitdate physdesc)"
+      },
+      {
+        "ligne": 170,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 184,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 185,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element custodhist content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | custodhist | acqinfo)+), got (head)"
+      },
+      {
+        "ligne": 186,
+        "categorie": "autre erreur de validation",
+        "message": "Element p is not declared in head list of possible children"
+      },
+      {
+        "ligne": 189,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (CDATA persname persname corpname)"
+      },
+      {
+        "ligne": 201,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element appraisal content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | appraisal)+), got (CDATA)"
+      },
+      {
+        "ligne": 207,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p p CDATA)"
+      },
+      {
+        "ligne": 212,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 219,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 221,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      }
+    ]
+  },
+  {
+    "fichier": "04_export_hierarchique_deux_niveaux.xml",
+    "xml_bien_forme": true,
+    "eadid": "flora 96",
+    "titre": "Intitulé : TEST",
+    "nombre_composants": 5,
+    "nombre_identifiants": 5,
+    "nombre_identifiants_uniques": 3,
+    "identifiants_dupliques": {
+      "TEST-2": 2,
+      "TEST-3": 2
+    },
+    "composants": [
+      {
+        "id": "TEST-2",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST-2"
+        ]
+      },
+      {
+        "id": "TEST-1",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "TEST-1"
+        ]
+      },
+      {
+        "id": "TEST-2",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST-1",
+          "TEST-2"
+        ]
+      },
+      {
+        "id": "TEST-3",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST-1",
+          "TEST-3"
+        ]
+      },
+      {
+        "id": "TEST-3",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST-3"
+        ]
+      }
+    ],
+    "validation_dtd": false,
+    "nombre_erreurs_validation": 43,
+    "categories_erreurs": {
+      "element non declare": 9,
+      "identifiant duplique": 2,
+      "modele de contenu non conforme": 32
+    },
+    "erreurs_validation": [
+      {
+        "ligne": 23,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element archdesc content does not follow the DTD, expecting (runner* , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)*), got (did admininfo add dsc)"
+      },
+      {
+        "ligne": 24,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle)"
+      },
+      {
+        "ligne": 30,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 33,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 34,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 45,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 49,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 53,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 55,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 57,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 58,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 65,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 66,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 71,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 75,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 79,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add c c )"
+      },
+      {
+        "ligne": 80,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 87,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 88,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 99,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 103,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 107,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 109,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 111,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 111,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST-2 already defined"
+      },
+      {
+        "ligne": 112,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 119,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 120,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 125,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 129,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 133,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 134,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 141,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 142,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 147,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 151,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      },
+      {
+        "ligne": 156,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 156,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST-3 already defined"
+      },
+      {
+        "ligne": 157,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 164,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 165,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 170,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 174,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element processinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | processinfo)+), got (date)"
+      }
+    ]
+  },
+  {
+    "fichier": "05_export_hierarchique_trois_niveaux.xml",
+    "xml_bien_forme": true,
+    "eadid": "flora 99",
+    "titre": "Intitulé : -",
+    "nombre_composants": 6,
+    "nombre_identifiants": 6,
+    "nombre_identifiants_uniques": 3,
+    "identifiants_dupliques": {
+      "TEST2-2": 2,
+      "TEST2-3": 3
+    },
+    "composants": [
+      {
+        "id": "TEST2-2",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST2-2"
+        ]
+      },
+      {
+        "id": "TEST2-3",
+        "level": "otherlevel",
+        "otherlevel": "Sous-dossier",
+        "chemin": [
+          "TEST2-2",
+          "TEST2-3"
+        ]
+      },
+      {
+        "id": "TEST2-1",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "TEST2-1"
+        ]
+      },
+      {
+        "id": "TEST2-2",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST2-1",
+          "TEST2-2"
+        ]
+      },
+      {
+        "id": "TEST2-3",
+        "level": "otherlevel",
+        "otherlevel": "Sous-dossier",
+        "chemin": [
+          "TEST2-1",
+          "TEST2-2",
+          "TEST2-3"
+        ]
+      },
+      {
+        "id": "TEST2-3",
+        "level": "otherlevel",
+        "otherlevel": "Sous-dossier",
+        "chemin": [
+          "TEST2-3"
+        ]
+      }
+    ],
+    "validation_dtd": false,
+    "nombre_erreurs_validation": 43,
+    "categories_erreurs": {
+      "element non declare": 10,
+      "identifiant duplique": 3,
+      "modele de contenu non conforme": 30
+    },
+    "erreurs_validation": [
+      {
+        "ligne": 17,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element archdesc content does not follow the DTD, expecting (runner* , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)*), got (did admininfo add dsc)"
+      },
+      {
+        "ligne": 18,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle)"
+      },
+      {
+        "ligne": 24,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 27,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 28,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 39,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 43,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 45,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 47,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo c )"
+      },
+      {
+        "ligne": 48,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 55,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 56,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 61,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 64,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 65,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 72,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 73,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 78,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 83,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add c )"
+      },
+      {
+        "ligne": 84,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 91,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 92,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 103,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 107,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 109,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 111,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo c )"
+      },
+      {
+        "ligne": 111,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST2-2 already defined"
+      },
+      {
+        "ligne": 112,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 119,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 120,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 125,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 128,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 128,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST2-3 already defined"
+      },
+      {
+        "ligne": 129,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 136,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 137,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 142,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 148,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 148,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST2-3 already defined"
+      },
+      {
+        "ligne": 149,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 156,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 157,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 162,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      }
+    ]
+  },
+  {
+    "fichier": "06_export_hierarchique_deux_branches.xml",
+    "xml_bien_forme": true,
+    "eadid": "flora 100",
+    "titre": "Intitulé : -",
+    "nombre_composants": 6,
+    "nombre_identifiants": 6,
+    "nombre_identifiants_uniques": 4,
+    "identifiants_dupliques": {
+      "TEST3-2": 2,
+      "TEST3-4": 2
+    },
+    "composants": [
+      {
+        "id": "TEST3-2",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST3-2"
+        ]
+      },
+      {
+        "id": "TEST3-1",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "TEST3-1"
+        ]
+      },
+      {
+        "id": "TEST3-2",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST3-1",
+          "TEST3-2"
+        ]
+      },
+      {
+        "id": "TEST3-3",
+        "level": "otherlevel",
+        "otherlevel": "Article",
+        "chemin": [
+          "TEST3-3"
+        ]
+      },
+      {
+        "id": "TEST3-4",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST3-3",
+          "TEST3-4"
+        ]
+      },
+      {
+        "id": "TEST3-4",
+        "level": "otherlevel",
+        "otherlevel": "Dossier",
+        "chemin": [
+          "TEST3-4"
+        ]
+      }
+    ],
+    "validation_dtd": false,
+    "nombre_erreurs_validation": 44,
+    "categories_erreurs": {
+      "element non declare": 11,
+      "identifiant duplique": 2,
+      "modele de contenu non conforme": 31
+    },
+    "erreurs_validation": [
+      {
+        "ligne": 17,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element archdesc content does not follow the DTD, expecting (runner* , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)*), got (did admininfo add dsc)"
+      },
+      {
+        "ligne": 18,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head unititle)"
+      },
+      {
+        "ligne": 24,
+        "categorie": "element non declare",
+        "message": "No declaration for element unititle"
+      },
+      {
+        "ligne": 27,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 28,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 39,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 43,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 45,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 47,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 48,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 55,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 56,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 61,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 65,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add c )"
+      },
+      {
+        "ligne": 66,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 73,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 74,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 85,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 89,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 91,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 93,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 93,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST3-2 already defined"
+      },
+      {
+        "ligne": 94,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 101,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 102,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 107,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 112,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo add c )"
+      },
+      {
+        "ligne": 113,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 120,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 121,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (persname persname corpname)"
+      },
+      {
+        "ligne": 132,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 136,
+        "categorie": "element non declare",
+        "message": "No declaration for element add"
+      },
+      {
+        "ligne": 138,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element otherfindaid content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | ref | extref | linkgrp | bibref | title | archref | otherfindaid)+), got (CDATA)"
+      },
+      {
+        "ligne": 140,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 141,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 148,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 149,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 154,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      },
+      {
+        "ligne": 159,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element c content does not follow the DTD, expecting (head? , did , (accessrestrict | accruals | acqinfo | altformavail | appraisal | arrangement | bibliography | bioghist | controlaccess | custodhist | descgrp | fileplan | index | odd | originalsloc | otherfindaid | phystech | prefercite | processinfo | relatedmaterial | scopecontent | separatedmaterial | userestrict | dsc | dao | daogrp | note)* , (thead? , c+)*), got (did admininfo)"
+      },
+      {
+        "ligne": 159,
+        "categorie": "identifiant duplique",
+        "message": "ID TEST3-4 already defined"
+      },
+      {
+        "ligne": 160,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element did content does not follow the DTD, expecting (head? , (abstract | container | dao | daogrp | langmaterial | materialspec | note | origination | physdesc | physloc | repository | unitdate | unitid | unittitle)+), got (head)"
+      },
+      {
+        "ligne": 167,
+        "categorie": "element non declare",
+        "message": "No declaration for element admininfo"
+      },
+      {
+        "ligne": 168,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element acqinfo content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | acqinfo)+), got (corpname)"
+      },
+      {
+        "ligne": 173,
+        "categorie": "modele de contenu non conforme",
+        "message": "Element accessrestrict content does not follow the DTD, expecting (head? , (address | chronlist | list | note | table | blockquote | p | legalstatus | accessrestrict)+), got (p CDATA)"
+      }
+    ]
+  }
+]

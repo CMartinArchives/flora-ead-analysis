@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<eadheader >
+<eadid >
+flora 99 
+</eadid >
+<filedesc >
+<titlestmt >
+<titleproper >
+ Entrée 
+flora 99 
+</titleproper ></titlestmt ></filedesc >
+<profiledesc >
+<creation >
+Créé par  UtilisateurTest le 
+<date> 16/06/2026 10:16:14 </date>
+</creation ></profiledesc ></eadheader >
+<archdesc level="otherlevel"  >
+<did >
+<head >
+Cote :  TEST2 
+Cotes extrêmes TEST2 
+Référence :  TEST2 
+</head >
+<unititle >
+Intitulé :  - 
+</unititle ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><dsc><c level="otherlevel" otherlevel="Dossier" id="TEST2-2" >
+<did >
+<head >
+Cote :  TEST2-2 
+Cotes extrêmes 2 
+Cote provisoire :  5.99 
+Cote de vérification :  TEST2 2 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ><c level="otherlevel" otherlevel="Sous-dossier" id="TEST2-3" >
+<did >
+<head >
+Cote :  TEST2-3 
+Cotes extrêmes 3 
+Cote provisoire :  6.99 
+Cote de vérification :  TEST2 3 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+</c>
+<c level="otherlevel" otherlevel="Article" id="TEST2-1" >
+<did >
+<head >
+Cote :  TEST2-1 
+Cotes extrêmes 1 
+Cote provisoire :  4.99 
+Cote de vérification :  TEST2 1 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><c level="otherlevel" otherlevel="Dossier" id="TEST2-2" >
+<did >
+<head >
+Cote :  TEST2-2 
+Cotes extrêmes 2 
+Cote provisoire :  5.99 
+Cote de vérification :  TEST2 2 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ><c level="otherlevel" otherlevel="Sous-dossier" id="TEST2-3" >
+<did >
+<head >
+Cote :  TEST2-3 
+Cotes extrêmes 3 
+Cote provisoire :  6.99 
+Cote de vérification :  TEST2 3 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+</c>
+</c>
+<c level="otherlevel" otherlevel="Sous-dossier" id="TEST2-3" >
+<did >
+<head >
+Cote :  TEST2-3 
+Cotes extrêmes 3 
+Cote provisoire :  6.99 
+Cote de vérification :  TEST2 3 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+</dsc></archdesc></ead>

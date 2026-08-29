@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+<ead>
+<eadheader>
+<eadid>
+flora 97 
+</eadid>
+<filedesc>
+<titlestmt>
+<titleproper>
+ Entrée 
+flora 97 
+</titleproper></titlestmt></filedesc>
+<profiledesc>
+<creation>
+Créé par  UtilisateurTest le 
+<date> 15/06/2026 11:15:05 </date>
+</creation></profiledesc></eadheader>
+<archdesc level="otherlevel">
+<did>
+<head>
+Cote :  ESSAI 
+Cotes extrêmes ESSAI 
+Référence :  ESSAI 
+</head>
+<unittitle>
+Intitulé :  TEST A PLAT 
+</unittitle></did>
+<acqinfo><p>
+
+<persname>
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname>
+<persname>
+Responsable du versement :  UTILISATEUR-TEST 
+</persname>
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml">
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname></p></acqinfo>
+<accessrestrict><p> Oui </p><p>
+Niveau de communicabilité :  Communicable à tous 
+</p></accessrestrict><otherfindaid><p>
+ Non 
+</p></otherfindaid><dsc><c level="otherlevel" otherlevel="Article" id="ESSAI-1">
+<did>
+<head>
+Cote :  ESSAI-1 
+Cotes extrêmes 1 
+Cote provisoire :  4.97 
+Cote de vérification :  ESSAI 1 
+</head><unitid>ESSAI-1</unitid></did>
+<acqinfo><p>
+
+<persname>
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname>
+<persname>
+Responsable du versement :  UTILISATEUR-TEST 
+</persname>
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml">
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname></p></acqinfo>
+<accessrestrict><p> Oui </p><p>
+Niveau de communicabilité :  Communicable à tous 
+</p></accessrestrict><otherfindaid><p>
+ Non 
+</p></otherfindaid></c>
+<c level="otherlevel" otherlevel="Article" id="ESSAI-2">
+<did>
+<head>
+Cote :  ESSAI-2 
+Cotes extrêmes 2 
+Cote provisoire :  4.97 
+Cote de vérification :  ESSAI 2 
+</head><unitid>ESSAI-2</unitid></did>
+<acqinfo><p>
+
+<persname>
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname>
+<persname>
+Responsable du versement :  UTILISATEUR-TEST 
+</persname>
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml">
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname></p></acqinfo>
+<accessrestrict><p> Oui </p><p>
+Niveau de communicabilité :  Communicable à tous 
+</p></accessrestrict><otherfindaid><p>
+ Non 
+</p></otherfindaid></c>
+<c level="otherlevel" otherlevel="Article" id="ESSAI-3">
+<did>
+<head>
+Cote :  ESSAI-3 
+Cotes extrêmes 3 
+Cote provisoire :  4.97 
+Cote de vérification :  ESSAI 3 
+</head><unitid>ESSAI-3</unitid></did>
+<acqinfo><p>
+
+<persname>
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname>
+<persname>
+Responsable du versement :  UTILISATEUR-TEST 
+</persname>
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml">
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname></p></acqinfo>
+<accessrestrict><p> Oui </p><p>
+Niveau de communicabilité :  Communicable à tous 
+</p></accessrestrict><otherfindaid><p>
+ Non 
+</p></otherfindaid></c>
+</dsc></archdesc></ead>

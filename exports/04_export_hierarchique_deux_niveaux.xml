@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<eadheader >
+<eadid >
+flora 96 
+</eadid >
+<filedesc >
+<titlestmt >
+<titleproper >
+ Entrée 
+flora 96 
+</titleproper >
+<author >
+ UtilisateurTest 
+</author ></titlestmt >
+<publicationstmt >
+<date> 12/06/2026 16:10:44 </date>
+</publicationstmt ></filedesc >
+<profiledesc >
+<creation >
+Créé par  UtilisateurTest le 
+<date> 12/06/2026 16:05:36 </date>
+</creation ></profiledesc ></eadheader >
+<archdesc level="otherlevel"  >
+<did >
+<head >
+Cote :  TEST 
+Cotes extrêmes TEST 
+Référence :  TEST 
+</head >
+<unititle >
+Intitulé :  TEST 
+</unititle ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict >
+<processinfo >
+<date >
+Date d'analyse :  12/06/2026 
+</date ></processinfo ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><dsc><c level="otherlevel" otherlevel="Dossier" id="TEST-2" >
+<did >
+<head >
+Cote :  TEST-2 
+Cotes extrêmes 2 
+Cote provisoire :  5.96 
+Cote de vérification :  TEST 2 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict >
+<processinfo >
+<date >
+Date d'analyse :  12/06/2026 
+</date ></processinfo ></admininfo ></c>
+<c level="otherlevel" otherlevel="Article" id="TEST-1" >
+<did >
+<head >
+Cote :  TEST-1 
+Cotes extrêmes 1 
+Cote provisoire :  4.96 
+Cote de vérification :  TEST 1 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict >
+<processinfo >
+<date >
+Date d'analyse :  16/06/2026 
+</date ></processinfo ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><c level="otherlevel" otherlevel="Dossier" id="TEST-2" >
+<did >
+<head >
+Cote :  TEST-2 
+Cotes extrêmes 2 
+Cote provisoire :  5.96 
+Cote de vérification :  TEST 2 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict >
+<processinfo >
+<date >
+Date d'analyse :  12/06/2026 
+</date ></processinfo ></admininfo ></c>
+<c level="otherlevel" otherlevel="Dossier" id="TEST-3" >
+<did >
+<head >
+Cote :  TEST-3 
+Cotes extrêmes 3 
+Cote provisoire :  5.96 
+Cote de vérification :  TEST 3 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict >
+<processinfo >
+<date >
+Date d'analyse :  16/06/2026 
+</date ></processinfo ></admininfo ></c>
+</c>
+<c level="otherlevel" otherlevel="Dossier" id="TEST-3" >
+<did >
+<head >
+Cote :  TEST-3 
+Cotes extrêmes 3 
+Cote provisoire :  5.96 
+Cote de vérification :  TEST 3 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict >
+<processinfo >
+<date >
+Date d'analyse :  16/06/2026 
+</date ></processinfo ></admininfo ></c>
+</dsc></archdesc></ead>

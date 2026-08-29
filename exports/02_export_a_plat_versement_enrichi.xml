@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<eadheader >
+<eadid >
+flora 98 
+</eadid >
+<filedesc >
+<titlestmt >
+<titleproper >
+ Entrée 
+flora 98 
+</titleproper ></titlestmt ></filedesc >
+<profiledesc >
+<langusage >
+Cette notice est rédigée en <language> Français </language>
+</langusage >
+<creation >
+Créé par  UtilisateurTest le 
+<date> 15/06/2026 14:07:28 </date>
+</creation ></profiledesc ></eadheader >
+<archdesc level="otherlevel"  >
+<did >
+<head >
+Cadre de classement:  Fonds moderne public 
+Cote :  ESSAI-RICHE 
+Cotes extrêmes ESSAI-RI 
+Référence :  ESSAI-RICHE 
+</head >
+<unititle >
+Intitulé :  Intitulé 
+</unititle >
+<origination >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_36.xml"  >
+Producteur :  ECOLE DE SAGES-FEMMES DE MONTPELLIER 
+</corpname ></origination >
+<unitdate >
+Années extrêmes :  1-2 
+</unitdate >
+<physdesc >
+<dimensions >
+Le métrage actuel est de  200.00 cm 
+</dimensions ></physdesc ></did >
+<admininfo >
+<custodhist >
+<head >
+Notes sur l'histoire administrative <p>  Histoire administrative </p>
+</head ></custodhist >
+<acqinfo >
+Modalité d'entrée :  Don 
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<appraisal >
+Conservation :  Conservation illimitée 
+</appraisal >
+<accruals >
+<p> Accroissement possible </p>
+</accruals >
+<accessrestrict >
+<p> Accroissement possible </p>
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<scopecontent >
+<p> Analyse </p>
+</scopecontent >
+<add >
+
+<otherfindaid >
+ Inventaire détaillé 
+</otherfindaid >
+<bibliography >
+<p> Bibliographie </p>
+</bibliography ></add >
+<odd >
+<p> Notes supplémentaires </p>
+</odd ><dsc><c level="otherlevel" otherlevel="Article" id="ESSAI-RICHE-1" >
+<did >
+<head >
+Cadre de classement:  Fonds moderne public 
+Cote :  ESSAI-RICHE-1 
+Cotes extrêmes 1 
+Cote provisoire :  4.98 
+Cote de vérification :  ESSAI-RICHE 1 
+</head >
+<origination >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_36.xml"  >
+Producteur :  ECOLE DE SAGES-FEMMES DE MONTPELLIER 
+</corpname ></origination ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ></c>
+<c level="otherlevel" otherlevel="Article" id="ESSAI-RICHE-2" >
+<did >
+<head >
+Cadre de classement:  Fonds moderne public 
+Cote :  ESSAI-RICHE-2 
+Cotes extrêmes 2 
+Cote provisoire :  4.98 
+Cote de vérification :  ESSAI-RICHE 2 
+</head >
+<origination >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_36.xml"  >
+Producteur :  ECOLE DE SAGES-FEMMES DE MONTPELLIER 
+</corpname ></origination ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ></c>
+<c level="otherlevel" otherlevel="Article" id="ESSAI-RICHE-3" >
+<did >
+<head >
+Cadre de classement:  Fonds moderne public 
+Cote :  ESSAI-RICHE-3 
+Cotes extrêmes 3 
+Cote provisoire :  4.98 
+Cote de vérification :  ESSAI-RICHE 3 
+</head >
+<origination >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_36.xml"  >
+Producteur :  ECOLE DE SAGES-FEMMES DE MONTPELLIER 
+</corpname ></origination ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ></c>
+</dsc></archdesc></ead>

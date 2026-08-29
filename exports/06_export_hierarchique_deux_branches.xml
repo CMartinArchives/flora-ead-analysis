@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<eadheader >
+<eadid >
+flora 100 
+</eadid >
+<filedesc >
+<titlestmt >
+<titleproper >
+ Entrée 
+flora 100 
+</titleproper ></titlestmt ></filedesc >
+<profiledesc >
+<creation >
+Créé par  UtilisateurTest le 
+<date> 16/06/2026 10:28:48 </date>
+</creation ></profiledesc ></eadheader >
+<archdesc level="otherlevel"  >
+<did >
+<head >
+Cote :  TEST3 
+Cotes extrêmes TEST3 
+Référence :  TEST3 
+</head >
+<unititle >
+Intitulé :  - 
+</unititle ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><dsc><c level="otherlevel" otherlevel="Dossier" id="TEST3-2" >
+<did >
+<head >
+Cote :  TEST3-2 
+Cotes extrêmes 2 
+Cote provisoire :  5.100 
+Cote de vérification :  TEST3 2 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+<c level="otherlevel" otherlevel="Article" id="TEST3-1" >
+<did >
+<head >
+Cote :  TEST3-1 
+Cotes extrêmes 1 
+Cote provisoire :  4.100 
+Cote de vérification :  TEST3 1 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><c level="otherlevel" otherlevel="Dossier" id="TEST3-2" >
+<did >
+<head >
+Cote :  TEST3-2 
+Cotes extrêmes 2 
+Cote provisoire :  5.100 
+Cote de vérification :  TEST3 2 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+</c>
+<c level="otherlevel" otherlevel="Article" id="TEST3-3" >
+<did >
+<head >
+Cote :  TEST3-3 
+Cotes extrêmes 3 
+Cote provisoire :  4.100 
+Cote de vérification :  TEST3 3 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<persname >
+Utilisateur versant :  UTILISATEUR-TEST 
+</persname >
+<persname >
+Responsable du versement :  UTILISATEUR-TEST 
+</persname >
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo >
+<add >
+
+<otherfindaid >
+ Non 
+</otherfindaid ></add ><c level="otherlevel" otherlevel="Dossier" id="TEST3-4" >
+<did >
+<head >
+Cote :  TEST3-4 
+Cotes extrêmes 4 
+Cote provisoire :  5.100 
+Cote de vérification :  TEST3 4 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+</c>
+<c level="otherlevel" otherlevel="Dossier" id="TEST3-4" >
+<did >
+<head >
+Cote :  TEST3-4 
+Cotes extrêmes 4 
+Cote provisoire :  5.100 
+Cote de vérification :  TEST3 4 
+</head ></did >
+<admininfo >
+<acqinfo >
+
+<corpname authfilenumber="PROVENANCE\PROVENANCE_35.xml"  >
+Service gestionnaire :  FACULTE DE MEDECINE DE MONTPELLIER 
+</corpname ></acqinfo >
+<accessrestrict >
+<p> Oui </p>
+Niveau de communicabilité :  Communicable à tous 
+</accessrestrict ></admininfo ></c>
+</dsc></archdesc></ead>
