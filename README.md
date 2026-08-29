@@ -1,25 +1,20 @@
 # Analyse des exports EAD de Flora
 
-Ce dépôt accompagne le mémoire consacré à l'architecture documentaire des
-Archives historiques de la Faculté de médecine de l'Université de Montpellier.
-Il documente les contrôles réalisés en 2026 sur l'export XML-EAD du module
-Archives de Flora dans l'instance de préproduction alors disponible.
+Ce dépôt accompagne le mémoire consacré à l’architecture documentaire des Archives historiques de la Faculté de médecine de l’Université de Montpellier. Il rassemble les fichiers et les scripts utilisés en 2026 pour analyser l’export XML-EAD du module Archives de Flora, dans la version de préproduction disponible pendant le stage.
 
-Les résultats ne constituent pas une évaluation générale de toutes les versions
-de Flora. Ils décrivent uniquement les fichiers produits par la configuration
-testée au moment de l'expérimentation.
+Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation.
 
 ## Contenu du dépôt
 
 ```text
 .
-├── analyser_exports.py          comptage des composants, détection des identifiants dupliqués et validation contre la DTD EAD 2002
-├── corriger_export_minimal.py   correction expérimentale des erreurs de validation du seul export minimal à plat
-├── requirements.txt             dépendance Python nécessaire à l’analyse et à la validation des fichiers XML (`lxml`)
+├── analyser_exports.py          analyse de la structure des exports et validation contre la DTD EAD 2002
+├── corriger_export_minimal.py   correction expérimentale du seul export minimal à plat
+├── requirements.txt             bibliothèque Python nécessaire au fonctionnement des scripts (`lxml`)
 ├── tests/
-│   └── test_analyse.py          vérification automatisée des résultats attendus
+│   └── test_analyse.py          vérification automatique des résultats attendus
 ├── dtd/
-│   └── ead.dtd                  DTD EAD 2002 employée pendant les tests
+│   └── ead.dtd                  DTD EAD 2002 utilisée pour valider les exports
 ├── exports/
 │   ├── 01_export_minimal_a_plat.xml
 │   ├── 02_export_a_plat_versement_enrichi.xml
@@ -28,32 +23,34 @@ testée au moment de l'expérimentation.
 │   ├── 05_export_hierarchique_trois_niveaux.xml
 │   └── 06_export_hierarchique_deux_branches.xml
 └── rapports/
-    └── analyse.json             résultats détaillés produits automatiquement par le script d’analyse
+    ├── analyse.json
+    └── 01_export_minimal_a_plat_corrige.xml
 ```
 
-Les valeurs nominatives saisies pour les essais ont été remplacées dans les
-copies publiables. Cette anonymisation ne modifie ni les éléments XML, ni leur
-ordre, ni les relations hiérarchiques, ni les identifiants archivistiques sur
-lesquels porte l'analyse.
+Le fichier `analyse.json` contient les résultats détaillés produits automatiquement par le script : nombre de composants, identifiants relevés, éventuelles répétitions, chemins hiérarchiques et erreurs de validation.
+
+Les noms de personnes utilisés pour les essais ont été remplacés dans les copies publiées. Cette anonymisation ne modifie ni les balises XML, ni leur ordre, ni les relations hiérarchiques, ni les identifiants archivistiques étudiés.
 
 ## Fichiers d’essai analysés
 
-Les essais à plat décrivent des articles placés au même niveau dans l’instrument, sans relation parent–enfant entre eux. Les essais dits « enrichis » ajoutent aux identifiants et intitulés minimaux des informations descriptives ou de gestion afin de vérifier leur transposition dans les éléments EAD correspondants.
+Dans les essais « à plat », les articles sont placés au même niveau dans l’instrument : aucun article n’est rattaché à un autre comme enfant. Les essais « enrichis » ajoutent aux informations minimales — principalement la cote et l’intitulé — différents champs descriptifs ou de gestion afin d’observer leur restitution dans l’export EAD.
 
 | Fichier | Configuration testée | Résultat structurel |
 |---|---|---|
-| `01_export_minimal_a_plat.xml` | Un versement contenant trois articles frères, décrits uniquement par les informations minimales nécessaires à leur identification | 3 composants `<c>` et 3 identifiants uniques |
-| `02_export_a_plat_versement_enrichi.xml` | La même structure sans relation parent–enfant, avec une description détaillée au niveau du versement et des articles volontairement peu renseignés | 3 composants `<c>` et aucun identifiant dupliqué |
-| `03_export_a_plat_article_enrichi.xml` | La même structure à plat, avec une description détaillée du versement et l’ajout de champs descriptifs et de gestion au niveau d’un article | 3 composants `<c>` et aucun identifiant dupliqué |
-| `04_export_hierarchique_deux_niveaux.xml` | Une arborescence à deux niveaux composée d’un article parent et de deux dossiers enfants | 5 composants `<c>` pour 3 unités : `TEST-2` et `TEST-3` sont chacun exportés deux fois |
-| `05_export_hierarchique_trois_niveaux.xml` | Une branche à trois niveaux composée d’un article, d’un dossier enfant et d’un sous-dossier rattaché à ce dernier | 6 composants `<c>` pour 3 unités : `TEST2-2` est exporté deux fois et `TEST2-3` trois fois |
-| `06_export_hierarchique_deux_branches.xml` | Deux branches indépendantes comprenant chacune un article parent et un dossier enfant | 6 composants `<c>` pour 4 unités : les dossiers `TEST3-2` et `TEST3-4` sont chacun exportés deux fois |
+| `01_export_minimal_a_plat.xml` | Un versement contenant trois articles placés au même niveau et décrits par un nombre minimal d’informations | 3 composants `<c>` et 3 identifiants uniques |
+| `02_export_a_plat_versement_enrichi.xml` | La même structure à plat, avec une description plus complète du versement et des articles peu renseignés | 3 composants `<c>` et aucun identifiant répété |
+| `03_export_a_plat_article_enrichi.xml` | La même structure à plat, avec une description plus complète du versement et l’ajout de champs descriptifs et de gestion à un article | 3 composants `<c>` et aucun identifiant répété |
+| `04_export_hierarchique_deux_niveaux.xml` | Une structure à deux niveaux comprenant un article parent et deux dossiers qui lui sont rattachés | 5 composants `<c>` pour 3 unités : `TEST-2` et `TEST-3` sont chacun exportés deux fois |
+| `05_export_hierarchique_trois_niveaux.xml` | Une structure à trois niveaux comprenant un article, un dossier rattaché à cet article et un sous-dossier rattaché au dossier | 6 composants `<c>` pour 3 unités : `TEST2-2` est exporté deux fois et `TEST2-3` trois fois |
+| `06_export_hierarchique_deux_branches.xml` | Deux branches distinctes comprenant chacune un article parent et un dossier enfant | 6 composants `<c>` pour 4 unités : `TEST3-2` et `TEST3-4` sont chacun exportés deux fois |
 
-Un dernier essai portait sur l’export simultané de plusieurs versements. Flora ayant produit une archive ZIP vide de 22 octets, ce test n’a fourni aucun document XML susceptible d’être analysé.
+Un dernier essai portait sur l’export simultané de plusieurs versements. Flora ayant produit une archive ZIP vide de 22 octets, aucun fichier XML n’a pu être analysé pour ce test.
 
 ## Installation
 
-Python 3.10 ou une version ultérieure est recommandé.
+Python 3.10 ou une version plus récente est recommandé.
+
+Les commandes suivantes créent un environnement Python séparé, l’activent et installent la bibliothèque `lxml`, utilisée pour lire et valider les fichiers XML :
 
 ```bash
 python3 -m venv .venv
@@ -61,7 +58,7 @@ source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
 
-## Reproduire l'analyse
+## Lancer l’analyse
 
 ```bash
 python3 analyser_exports.py \
@@ -70,21 +67,20 @@ python3 analyser_exports.py \
   exports/*.xml
 ```
 
-Le script vérifie que chaque fichier est un XML bien formé, compte les
-composants `<c>`, compare le nombre d'occurrences d'identifiants à leur nombre
-de valeurs uniques, restitue le chemin hiérarchique de chaque composant et
-valide le document contre la DTD EAD 2002. Le rapport JSON conserve les messages
-détaillés de validation et une catégorisation synthétique des erreurs.
+Pour chaque export, le script :
 
-Le programme renvoie le code de sortie `1` dès qu'un document est mal formé ou
-invalide contre la DTD. Ce résultat est attendu pour les exports originaux
-étudiés ; il permet notamment d'employer le contrôle dans une intégration
-continue sans confondre exécution réussie du script et validité des documents.
+- vérifie que le fichier respecte les règles générales d’écriture du XML ;
+- compte les composants archivistiques `<c>` ;
+- relève leurs identifiants et signale ceux qui apparaissent plusieurs fois ;
+- restitue la place de chaque composant dans l’arborescence ;
+- vérifie la conformité du fichier avec la DTD EAD 2002 ;
+- enregistre les résultats détaillés dans `rapports/analyse.json`.
 
-## Preuve de concept de correction
+Le script renvoie le code de sortie `1` lorsqu’au moins un export n’est pas conforme à la DTD. Ce résultat est normal ici, puisque l’analyse vise précisément à relever les erreurs présentes dans les fichiers produits par Flora. Il ne signifie donc pas que le script a échoué.
 
-Le second script reproduit le retraitement expérimental appliqué au seul export
-minimal :
+## Correction expérimentale de l’export minimal
+
+Le second script reproduit la correction expérimentale appliquée au seul export minimal à plat :
 
 ```bash
 python3 corriger_export_minimal.py \
@@ -96,45 +92,48 @@ python3 analyser_exports.py \
   rapports/01_export_minimal_a_plat_corrige.xml
 ```
 
-Il remplace `<unititle>` par `<unittitle>`, retire les enveloppes
-`<admininfo>` et `<add>` en conservant leurs enfants, restructure le contenu de
-`<acqinfo>`, `<accessrestrict>` et `<otherfindaid>`, puis complète les blocs
-`<did>` qui ne contiennent qu'un `<head>`. Cette transformation démontre que
-plusieurs anomalies du cas minimal suivent des règles automatisables.
+Le script effectue plusieurs corrections précises :
 
-Elle ne constitue toutefois pas une chaîne de conversion pérenne : elle ne
-traite ni tous les champs des exports enrichis, ni la reconstruction des
-arborescences dupliquées. Les fichiers hiérarchiques doivent donc rester des
-objets d'analyse et non être « corrigés » automatiquement par suppression des
-occurrences répétées, car leur seule position dans l'export ne suffit pas à
-garantir la reconstruction de l'intention descriptive initiale.
+- il remplace la balise erronée `<unititle>` par `<unittitle>` ;
+- il retire les balises `<admininfo>` et `<add>`, qui n’appartiennent pas à la DTD EAD 2002, tout en conservant les informations qu’elles contiennent ;
+- il replace le contenu de `<acqinfo>`, `<accessrestrict>` et `<otherfindaid>` dans les sous-éléments attendus par la DTD ;
+- il complète les blocs `<did>` qui ne contiennent qu’un titre de rubrique `<head>`.
 
-## Exécuter les tests automatisés
+Après ces transformations, l’export minimal est conforme à la DTD EAD 2002. Ce résultat montre que certaines erreurs peuvent être corrigées automatiquement lorsqu’elles suivent une règle stable.
+
+Ce script reste cependant un essai limité. Il ne traite pas l’ensemble des champs présents dans les exports enrichis et ne reconstruit pas les arborescences dans lesquelles des unités sont répétées. Supprimer automatiquement les doublons ne suffirait pas : il faudrait également déterminer la place correcte de chaque unité dans la hiérarchie. Les exports hiérarchiques sont donc conservés comme fichiers d’analyse et ne sont pas corrigés par ce script.
+
+## Vérifier automatiquement les résultats
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-Les tests vérifient les nombres de composants et d'identifiants uniques, les
-duplications attendues dans les trois arborescences et la validité du fichier
-minimal après application de la preuve de concept.
+Ces tests vérifient que le script retrouve bien :
 
-## Principaux constats reproductibles
+- le nombre attendu de composants et d’identifiants ;
+- les identifiants répétés dans les trois exports hiérarchiques ;
+- les 29 erreurs présentes dans l’export minimal original ;
+- la conformité à la DTD du fichier minimal après correction.
 
-* aucun export fourni ne valide en l'état contre la DTD EAD 2002 annoncée dans
-  son `DOCTYPE` ;
-* le cas minimal produit 29 erreurs de validation ;
-* plusieurs champs sont bien associés à des éléments EAD spécialisés, mais
-  certaines structures ou imbrications ne respectent pas leur modèle de
-  contenu ;
-* les essais à plat conservent des identifiants uniques ;
-* dès qu'une relation parent--enfant est introduite, les unités enfants sont
-  exportées à la fois comme composants autonomes et sous leur parent ;
-* la répétition augmente avec la profondeur dans l'essai `TEST2`.
+Ils permettent de s’assurer qu’une modification ultérieure du code ne change pas involontairement les résultats de l’analyse.
 
-## Périmètre méthodologique
+## Principaux résultats
 
-La validation contre une DTD vérifie une conformité syntaxique et structurelle.
-Elle ne suffit pas à établir la qualité archivistique ou l'interopérabilité
-effective d'un instrument. L'analyse associe donc validation, comptage des
-identifiants et examen des relations hiérarchiques.
+- Aucun des six exports originaux n’est conforme en l’état à la DTD EAD 2002 indiquée dans son `DOCTYPE`.
+
+- L’export minimal produit 29 erreurs de validation.
+
+- Plusieurs informations sont bien placées dans des balises EAD adaptées, mais certaines balises employées, leur contenu ou leur ordre ne respectent pas la DTD.
+
+- Les trois exports à plat conservent un identifiant unique pour chaque article.
+
+- Dès qu’une relation parent–enfant est créée dans Flora, les unités enfants sont exportées une première fois seules, puis une nouvelle fois à l’intérieur de leur parent.
+
+- Dans l’essai à trois niveaux, le nombre de répétitions augmente avec la profondeur : le dossier apparaît deux fois et le sous-dossier trois fois.
+
+## Limites de l’analyse
+
+La validation contre la DTD permet de vérifier si les balises, leur ordre et leur organisation respectent les règles de l’EAD 2002. Elle ne permet pas, à elle seule, de juger la qualité archivistique d’un instrument ni de garantir qu’il sera correctement repris par Calames ou FranceArchives.
+
+L’analyse combine donc trois contrôles complémentaires : la validation contre la DTD, le repérage des identifiants répétés et l’examen de la hiérarchie produite dans chaque export.
