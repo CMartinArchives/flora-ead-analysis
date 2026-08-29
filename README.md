@@ -12,7 +12,7 @@ Les résultats présentés ne valent pas pour toutes les versions ou configurati
 .
 ├── analyser_exports.py          analyse de la structure des exports et validation contre la DTD EAD 2002
 ├── corriger_export_minimal.py   correction expérimentale du seul export minimal à plat
-├── requirements.txt             bibliothèque Python nécessaire au fonctionnement des scripts (`lxml`)
+├── requirements.txt             bibliothèque Python nécessaire au fonctionnement des scripts (lxml)
 ├── dtd/
 │   └── ead.dtd                  DTD EAD 2002 utilisée pour valider les exports
 ├── exports/
@@ -27,7 +27,7 @@ Les résultats présentés ne valent pas pour toutes les versions ou configurati
     └── 01_export_minimal_a_plat_corrige.xml
 ```
 
-Le fichier `analyse.json` contient les résultats détaillés produits automatiquement par le script : nombre de composants, identifiants relevés, éventuelles répétitions, chemins hiérarchiques et erreurs de validation.
+Le dossier `rapports/` contient les fichiers produits par les deux scripts. `analyse.json`, généré par `analyser_exports.py`, rassemble les résultats de l’analyse des six exports. `01_export_minimal_a_plat_corrige.xml`, généré par `corriger_export_minimal.py`, correspond à la version corrigée du premier export et sert à vérifier que les corrections expérimentales permettent de le rendre conforme à la DTD EAD 2002.
 
 Les noms de personnes utilisés pour les essais ont été remplacés dans les copies publiées. Cette anonymisation ne modifie ni les balises XML, ni leur ordre, ni les relations hiérarchiques, ni les identifiants archivistiques étudiés.
 
