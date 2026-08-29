@@ -4,7 +4,7 @@ Ce dépôt accompagne le mémoire consacré à l’architecture documentaire des
 
 Le script `analyser_exports.py` peut être utilisé pour examiner d’autres fichiers en EAD 2002, à condition de lui fournir la DTD correspondante. Les contrôles structurels et les catégories d’erreurs qu’il emploie ont toutefois été définis à partir des exports Flora étudiés. Le script `corriger_export_minimal.py` est, quant à lui, strictement limité au fichier minimal fourni dans ce dépôt et ne constitue pas un outil général de correction des fichiers EAD.
 
-Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation, à l'été 2026.
+Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation, à l’été 2026.
 
 ## Contenu du dépôt
 
@@ -30,6 +30,12 @@ Les résultats présentés ne valent pas pour toutes les versions ou configurati
 Le dossier `rapports/` contient les fichiers produits par les deux scripts. `analyse.json`, généré par `analyser_exports.py`, rassemble les résultats de l’analyse des six exports. `01_export_minimal_a_plat_corrige.xml`, généré par `corriger_export_minimal.py`, correspond à la version corrigée du premier export et sert à vérifier que les corrections expérimentales permettent de le rendre conforme à la DTD EAD 2002.
 
 Les noms de personnes utilisés pour les essais ont été remplacés dans les copies publiées. Cette anonymisation ne modifie ni les balises XML, ni leur ordre, ni les relations hiérarchiques, ni les identifiants archivistiques étudiés.
+
+## Méthode et assistance à la rédaction des scripts
+
+Les scripts utilisent des fonctions courantes de Python et de la bibliothèque `lxml` pour lire et parcourir des fichiers XML, rechercher des éléments, compter des identifiants, modifier une arborescence et valider un document contre une DTD. Leur rédaction s’appuie principalement sur la [documentation de Python](https://docs.python.org/3/) ainsi que sur le [tutoriel](https://lxml.de/tutorial.html) et la [documentation relative à la validation](https://lxml.de/validation.html) de `lxml`.
+
+Les scénarios d’essai, les champs saisis dans Flora, les anomalies recherchées et l’interprétation archivistique des résultats ont été définis dans le cadre du stage. ChatGPT, fondé sur le modèle GPT-5, a été utilisé comme aide à la rédaction et à la vérification du code, en particulier pour les opérations les plus techniques : parcours des relations parent–enfant, repérage des identifiants répétés, classement des messages produits par la DTD, déplacement d’éléments XML sans perte de contenu, production du rapport JSON et gestion des arguments de la ligne de commande. Les scripts ont ensuite été adaptés aux exports étudiés et leurs résultats contrôlés sur les fichiers publiés dans ce dépôt.
 
 ## Fichiers d’essai analysés
 
