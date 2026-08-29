@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Preuve de concept de correction de l'export minimal à plat de Flora.
+"""Correction expérimentale de l'export minimal à plat de Flora.
 
 Ce script reproduit le retraitement décrit dans le mémoire. Il corrige des
 anomalies régulières du seul cas minimal : nom de ``<unittitle>``, enveloppes
 héritées ``<admininfo>`` et ``<add>``, contenus textuels non structurés et
 ``<did>`` de composants dépourvus d'élément d'identification.
 
-Il ne reconstruit pas les hiérarchies et ne doit donc pas être présenté comme
-un convertisseur général des exports Flora. Le fichier source n'est jamais
-modifié : un nouveau fichier est toujours produit.
+Il ne reconstruit pas les hiérarchies et n'est pas
+un convertisseur général des exports Flora. 
+Le fichier source n'est jamais modifié : un nouveau fichier est toujours produit.
 """
 
 from __future__ import annotations
