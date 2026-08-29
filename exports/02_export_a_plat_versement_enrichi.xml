@@ -1,4 +1,45 @@
-<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd"><ead>
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<!--
+CONFIGURATION DU TEST À PLAT AVEC VERSEMENT ENRICHI
+
+Versement :
+- langue de la description : français ;
+- cadre de classement : Fonds moderne public ;
+- cote et référence : ESSAI-RICHE ;
+- cotes extrêmes : ESSAI-RI ;
+- intitulé : Intitulé ;
+- producteur : ECOLE DE SAGES-FEMMES DE MONTPELLIER ;
+- années extrêmes : 1-2 ;
+- métrage : 200 cm ;
+- histoire administrative : Histoire administrative ;
+- modalité d’entrée : don ;
+- utilisateur versant : UTILISATEUR-TEST ;
+- responsable du versement : UTILISATEUR-TEST ;
+- service gestionnaire : FACULTE DE MEDECINE DE MONTPELLIER ;
+- sort final : conservation illimitée ;
+- accroissement : possible ;
+- communicabilité : oui, communicable à tous ;
+- analyse : Analyse ;
+- autre instrument de recherche : Inventaire détaillé ;
+- bibliographie : Bibliographie ;
+- notes supplémentaires : Notes supplémentaires.
+
+Unités d’archives :
+- trois unités de type « Article », placées au même niveau et sans relation
+  parent-enfant entre elles ;
+- cotes : ESSAI-RICHE-1, ESSAI-RICHE-2 et ESSAI-RICHE-3 ;
+- cotes extrêmes : 1, 2 et 3 ;
+- cote provisoire commune : 4.98 ;
+- cotes de vérification : ESSAI-RICHE 1, ESSAI-RICHE 2
+  et ESSAI-RICHE 3 ;
+- aucun champ descriptif supplémentaire renseigné au niveau des articles.
+
+Les autres informations présentes au niveau des articles ont été ajoutées
+automatiquement par Flora ou reprises depuis le versement.
+-->
+
+<ead>
 <eadheader >
 <eadid >
 flora 98 
