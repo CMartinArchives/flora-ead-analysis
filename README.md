@@ -6,6 +6,14 @@ Le script `analyser_exports.py` peut être utilisé pour examiner d’autres fic
 
 Les résultats présentés ne valent pas pour toutes les versions ou configurations de Flora. Ils concernent uniquement l’instance et les fichiers testés au moment de l’expérimentation, à l’été 2026.
 
+## Périmètre et avertissement
+
+Cette analyse porte uniquement sur l’instance de préproduction et sur la version de Flora accessibles pendant le stage, à l’été 2026. Elle ne constitue pas une évaluation générale du logiciel et ne préjuge pas des corrections, paramétrages ou évolutions ultérieures de son export EAD.
+
+Les fichiers ont été produits avec des données fictives depuis une instance mise à disposition de l’Université dans le cadre du déploiement de Flora. Le dépôt ne contient aucune donnée archivistique réelle, information confidentielle, documentation interne ou composant du logiciel.
+
+Le dépôt restera public pendant l’évaluation du mémoire, puis passera en accès privé. L’accès à l’instance ayant été accordé pour les besoins professionnels du projet, les exports techniques qui en sont issus n’ont pas vocation à rester diffusés durablement.
+
 ## Contenu du dépôt
 
 ```text
