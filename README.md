@@ -31,11 +31,13 @@ Le dossier `rapports/` contient les fichiers produits par les deux scripts. `ana
 
 Les noms de personnes utilisés pour les essais ont été remplacés. Cette anonymisation ne modifie ni les balises XML, ni leur ordre, ni les relations hiérarchiques, ni les identifiants archivistiques étudiés.
 
+Les valeurs renseignées dans Flora pour produire chaque scénario sont précisées dans un commentaire placé au début de chaque fichier XML. Ces commentaires indiquent les champs remplis et, pour les essais hiérarchiques, les relations créées entre les unités. Ajoutés après l’export, ils documentent les conditions de l’essai sans modifier la structure EAD analysée.
+
 ## Méthode et assistance à la rédaction des scripts
 
 Les scripts utilisent des fonctions courantes de Python et de la bibliothèque `lxml` pour lire et parcourir des fichiers XML, rechercher des éléments, compter des identifiants, modifier une arborescence et valider un document contre une DTD. Leur rédaction s’appuie principalement sur la [documentation de Python](https://docs.python.org/3/) ainsi que sur le [tutoriel](https://lxml.de/tutorial.html) et la [documentation relative à la validation](https://lxml.de/validation.html) de `lxml`.
 
-Les scénarios d’essai, les champs saisis dans Flora, les anomalies recherchées et l’interprétation archivistique des résultats ont été définis dans le cadre du stage. ChatGPT (modèle GPT-5) a été utilisé comme aide à la rédaction et à la vérification du code, en particulier pour les opérations les plus techniques : parcours des relations parent–enfant, repérage des identifiants répétés, classement des messages produits par la DTD, déplacement d’éléments XML sans perte de contenu, production du rapport JSON et gestion des arguments de la ligne de commande. Les scripts ont ensuite été adaptés aux exports étudiés et leurs résultats contrôlés sur les fichiers publiés dans ce dépôt.
+Les scénarios d’essai, les champs saisis dans Flora, les anomalies recherchées et l’interprétation archivistique des résultats ont été définis dans le cadre du stage. ChatGPT (modèle GPT-5) a été utilisé comme aide à la rédaction et à la vérification du code, en particulier pour les opérations les plus techniques : parcours des relations parent–enfant, repérage des identifiants répétés, classement des messages produits par la DTD, déplacement d’éléments XML sans perte de contenu, production du rapport JSON et lecture des noms de fichiers et des options indiqués lors du lancement des scripts. Les scripts ont ensuite été adaptés aux exports étudiés et leurs résultats contrôlés sur les fichiers publiés dans ce dépôt.
 
 ## Fichiers d’essai analysés
 
@@ -52,11 +54,24 @@ Dans les essais « à plat », les articles sont placés au même niveau dans l�
 
 Un dernier essai portait sur l’export simultané de plusieurs versements. Flora ayant produit une archive ZIP vide de 22 octets, aucun fichier XML n’a pu être analysé pour ce test.
 
+### Résultats de la validation contre la DTD
+
+La validation contre la DTD EAD 2002 complète l’analyse structurelle. Elle vérifie si les éléments employés, leur contenu et leur ordre respectent le modèle déclaré dans chaque fichier. Les catégories présentées ci-dessous regroupent les messages détaillés conservés dans `rapports/analyse.json`.
+
+| Fichier | Nombre d’erreurs | Répartition des erreurs |
+|---|---:|---|
+| `01_export_minimal_a_plat.xml` | 29 | 20 modèles de contenu non conformes ; 9 éléments non déclarés |
+| `02_export_a_plat_versement_enrichi.xml` | 30 | 20 modèles de contenu non conformes ; 9 éléments non déclarés ; 1 autre erreur (`<p>` non admis dans `<head>`) |
+| `03_export_a_plat_article_enrichi.xml` | 37 | 25 modèles de contenu non conformes ; 10 éléments non déclarés ; 2 autres erreurs (`<p>` non admis dans `<head>`) |
+| `04_export_hierarchique_deux_niveaux.xml` | 43 | 32 modèles de contenu non conformes ; 9 éléments non déclarés ; 2 identifiants dupliqués |
+| `05_export_hierarchique_trois_niveaux.xml` | 43 | 30 modèles de contenu non conformes ; 10 éléments non déclarés ; 3 identifiants dupliqués |
+| `06_export_hierarchique_deux_branches.xml` | 44 | 31 modèles de contenu non conformes ; 11 éléments non déclarés ; 2 identifiants dupliqués |
+
 ## Installation
 
-Python 3.10 ou une version plus récente est recommandé.
+Python 3.10 ou une version plus récente est recommandé. Les commandes doivent être exécutées depuis le dossier principal du dépôt.
 
-Les commandes suivantes créent un environnement Python séparé, l’activent et installent la bibliothèque `lxml`, utilisée pour lire et valider les fichiers XML :
+### Linux et macOS
 
 ```bash
 python3 -m venv .venv
@@ -64,7 +79,23 @@ source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
 
+### Windows avec PowerShell
+
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+py -m pip install -r requirements.txt
+```
+
+Si l’activation est refusée par PowerShell, les commandes peuvent aussi être exécutées directement avec l’interpréteur de l’environnement, sans l’activer :
+
+```powershell
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
 ## Lancer l’analyse
+
+### Linux et macOS
 
 ```bash
 python3 analyser_exports.py \
@@ -72,6 +103,19 @@ python3 analyser_exports.py \
   --json rapports/analyse.json \
   exports/*.xml
 ```
+
+### Windows avec PowerShell
+
+PowerShell transmet au script la liste des fichiers XML présents dans le dossier `exports` :
+
+```powershell
+py analyser_exports.py `
+  --dtd dtd/ead.dtd `
+  --json rapports/analyse.json `
+  (Get-ChildItem exports/*.xml).FullName
+```
+
+Si l’environnement n’a pas été activé, `py` peut être remplacé par `.venv\Scripts\python.exe`.
 
 Pour chaque export, le script :
 
@@ -86,7 +130,9 @@ Le script renvoie le code de sortie `1` lorsqu’au moins un export n’est pas 
 
 ## Correction expérimentale de l’export minimal
 
-Le second script reproduit la correction expérimentale appliquée au seul export minimal à plat :
+Le second script reproduit la correction expérimentale appliquée au seul export minimal à plat.
+
+### Linux et macOS
 
 ```bash
 python3 corriger_export_minimal.py \
@@ -95,6 +141,18 @@ python3 corriger_export_minimal.py \
 
 python3 analyser_exports.py \
   --dtd dtd/ead.dtd \
+  rapports/01_export_minimal_a_plat_corrige.xml
+```
+
+### Windows avec PowerShell
+
+```powershell
+py corriger_export_minimal.py `
+  exports/01_export_minimal_a_plat.xml `
+  rapports/01_export_minimal_a_plat_corrige.xml
+
+py analyser_exports.py `
+  --dtd dtd/ead.dtd `
   rapports/01_export_minimal_a_plat_corrige.xml
 ```
 
@@ -112,15 +170,10 @@ Ce script reste cependant un essai limité. Il ne traite pas l’ensemble des ch
 ## Principaux résultats
 
 - Aucun des six exports originaux n’est conforme en l’état à la DTD EAD 2002 indiquée dans son `DOCTYPE`.
-
 - L’export minimal produit 29 erreurs de validation.
-
 - Plusieurs informations sont bien placées dans des balises EAD adaptées, mais certaines balises employées, leur contenu ou leur ordre ne respectent pas la DTD.
-
 - Les trois exports à plat conservent un identifiant unique pour chaque article.
-
 - Dès qu’une relation parent–enfant est créée dans Flora, les unités enfants sont exportées une première fois seules, puis une nouvelle fois à l’intérieur de leur parent.
-
 - Dans l’essai à trois niveaux, le nombre de répétitions augmente avec la profondeur : le dossier apparaît deux fois et le sous-dossier trois fois.
 
 ## Limites de l’analyse
