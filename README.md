@@ -58,6 +58,8 @@ Un dernier essai portait sur l’export simultané de plusieurs versements. Flor
 
 La validation contre la DTD EAD 2002 complète l’analyse structurelle. Elle vérifie si les éléments employés, leur contenu et leur ordre respectent le modèle déclaré dans chaque fichier. Les catégories présentées ci-dessous regroupent les messages détaillés conservés dans `rapports/analyse.json`.
 
+Les messages sont répartis en plusieurs catégories. Un « élément non déclaré » désigne une balise absente de la DTD EAD 2002, comme `<admininfo>`, `<add>` ou la forme erronée `<unititle>`. Un « modèle de contenu non conforme » concerne une balise reconnue par la DTD, mais dont le contenu, l’ordre ou l’emplacement ne respecte pas les règles prévues. Une même anomalie peut produire plusieurs messages : les nombres indiqués correspondent donc à des erreurs de validation relevées par la DTD, et non à autant d’anomalies distinctes.
+
 | Fichier | Nombre d’erreurs | Répartition des erreurs |
 |---|---:|---|
 | `01_export_minimal_a_plat.xml` | 29 | 20 modèles de contenu non conformes ; 9 éléments non déclarés |
